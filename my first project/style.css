@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #444;
+    overflow: hidden;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Search Section */
+.search-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-container input,
+.search-container button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    display: inline-block;
+}
+
+button {
+    background-color: #850e0e;
+    color: rgb(18, 231, 107);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #056d56;
+}
+
+/* Job Listings Section */
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.job-listing {
+    background-color: rgb(197, 156, 156);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(33, 9, 71, 0.1);
+}
+
+.job-listing h3 {
+    margin-top:0;
+}
+
+.job-listing a {
+    text-decoration: none;
+    color: #682a2a;
+    font-weight: bold;
+}
+
+.job-listing a:hover {
+    color: #007BFF;
+}
+
+.job-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .job-listings {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .job-listings {
+        grid-template-columns: 1fr;  /* 1 column on small screens */
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 90%;
+    }
+}
+
+
+
+

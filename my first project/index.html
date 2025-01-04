@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Listings</h1>
+    <p>Find jobs matching your search criteria</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="results.html">Browse Jobs</a>
+</nav>
+
+<!-- Search Criteria Display -->
+<div class="search-summary">
+    <h2>Search Results for:</h2>
+    <p><strong>Job Title:</strong> <span id="job-title"></span></p>
+    <p><strong>Location:</strong> <span id="location"></span></p>
+    <p><strong>Programming Language:</strong> <span id="language"></span></p>
+</div>
+
+<!-- Job Listings (3-column grid) -->
+<div class="job-listings">
+    <div class="job-listing">
+        <h3>Frontend Developer</h3>
+        <p><strong>Company:</strong> WebWorks</p>
+        <p><strong>Location:</strong> San Francisco, CA</p>
+        <p><strong>Programming Language:</strong> JavaScript, React</p>
+        <a href="job-details.html?jobID=1">View Details</a>
+    </div>
+
+    <div class="job-listing">
+        <h3>Backend Developer</h3>
+        <p><strong>Company:</strong> DataSolve</p>
+        <p><strong>Location:</strong> New York, NY</p>
+        <p><strong>Programming Language:</strong> Python, Django</p>
+        <a href="job-details.html?jobID=2">View Details</a>
+    </div>
+
+    <div class="job-listing">
+        <h3>Full Stack Developer</h3>
+        <p><strong>Company:</strong> DevSolutions</p>
+        <p><strong>Location:</strong> Austin, TX</p>
+        <p><strong>Programming Language:</strong> JavaScript, Node.js</p>
+        <a href="job-details.html?jobID=3">View Details</a>
+    </div>
+
+    <div class="job-listing">
+        <h3>UI/UX Designer</h3>
+        <p><strong>Company:</strong> DesignHub</p>
+        <p><strong>Location:</strong> Los Angeles, CA</p>
+        <p><strong>Programming Language:</strong> Figma, Sketch</p>
+        <a href="job-details.html?jobID=4">View Details</a>
+    </div>
+
+    <div class="job-listing">
+        <h3>DevOps Engineer</h3>
+        <p><strong>Company:</strong> CloudWorks</p>
+        <p><strong>Location:</strong> Seattle, WA</p>
+        <p><strong>Programming Language:</strong> Docker, Kubernetes</p>
+        <a href="job-details.html?jobID=5">View Details</a>
+    </div>
+
+    <div class="job-listing">
+        <h3>Data Scientist</h3>
+        <p><strong>Company:</strong> DataVision</p>
+        <p><strong>Location:</strong> Boston, MA</p>
+        <p><strong>Programming Language:</strong> Python, R</p>
+        <a href="job-details.html?jobID=6">View Details</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Job Search Portal. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Display the search parameters based on the URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById("job-title").textContent = urlParams.get("title") || "Any";
+    document.getElementById("location").textContent = urlParams.get("location") || "Any";
+    document.getElementById("language").textContent = urlParams.get("language") || "Any";
+</script>
+
+</body>
+</html>
+
+
+
